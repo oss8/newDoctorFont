@@ -1,0 +1,32 @@
+// 底部导航
+.mint-tabbar {
+    background-color: $white;
+    .mint-tab-item {
+        .icon {
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .icon-service {
+            background-image: url(~@/assets/icon_service_normal.png);
+        }
+        .icon-customer {
+            background-image: url(~@/assets/icon_customer_normal.png);
+        }
+        .icon-mine {
+            background-image: url(~@/assets/icon_mine_normal.png);
+        }
+        &.is-selected {
+            background-color: transparent;
+            color: $colorPrimary;
+            .icon-service {
+                background-image: url(~@/assets/icon_service_active.png);
+            }
+            .icon-customer {
+                background-image: url(~@/assets/icon_customer_active.png);
+            }
+            .icon-mine {
+                background-image: url(~@/assets/icon_mine_active.png);
+            }
+        }
+    }
+}

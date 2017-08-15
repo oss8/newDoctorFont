@@ -1,0 +1,440 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+    color: $colorDefault;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: $colorTitle;
+}
+
+h5,
+h6 {
+    color: $colorTitleSub;
+}
+
+p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+    color: $colorPlaceholder!important;
+}
+
+//居中
+.fn-center {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: box;
+    box-orient: horizontal;
+    box-pack: center;
+    box-align: center;
+    text-align: center;
+}
+
+.fn-left {
+    float: left;
+}
+
+.fn-right {
+    float: right;
+}
+
+.fn-flex {
+    display: flex;
+    text-align: center;
+    >* {
+        flex: 1
+    }
+}
+
+.mint-cell:last-child {
+    background-image: -webkit-linear-gradient(bottom, $lineColor, $lineColor 50%, transparent 50%);
+    background-image: linear-gradient(0deg, $lineColor, $lineColor 50%, transparent 50%);
+}
+
+.mint-cell-wrapper {
+    background-image: -webkit-linear-gradient(top, $lineColor, $lineColor 50%, transparent 50%);
+    background-image: linear-gradient(180deg, $lineColor, $lineColor 50%, transparent 50%);
+}
+
+.mint-radio-input:checked+.mint-radio-core {
+    background-color: $colorPrimary;
+    border-color: $colorPrimary;
+}
+.mint-cell-wrapper{
+  font-size:14px;
+}
+.mint-cell-label {
+    color: $colorTip;
+    padding-right: 15px;
+}
+
+.mint-cell-allow-right:after {
+    width: 8px;
+    height: 8px;
+    border-color: $borderColor;
+    right: 15px;
+}
+//搜索
+.mint-searchbar {
+  @include pixelborder(bottom, $lineColor, 0);
+  background: #fff;
+  padding: 10px 10px 10px 0;
+}
+
+.mint-searchbar-core {
+  background-color: #f4f6f8;
+  font-size: 14px;
+  padding: 5px 3px 5px 10px;
+  height: 33px;
+  border-radius: 20px;
+}
+
+.mint-searchbar-cancel {
+  color: #b9bfca;
+}
+
+#app {
+    min-height: 100%;
+    position: relative;
+}
+
+.join-p {
+    padding: 10px;
+}
+
+.join-p-lr {
+    padding: 0 10px;
+}
+
+.join-p-tb {
+    padding: 10px 0;
+}
+
+.join-p-t {
+    padding-top: 10px;
+}
+
+.join-m {
+    margin: 15px 10px;
+}
+
+.join-m-lr {
+    margin: 0 10px;
+}
+
+.join-m-tb {
+    margin: 15px 0;
+}
+
+.page-button {
+    padding: 0 10px 15px
+}
+
+.page-part {
+    margin-bottom: 15px;
+}
+
+.join-spaceTitle {
+    // font-size: 14px;
+    color: $colorText;
+    padding: 12px 15px;
+    background-color: $backgroundColor;
+}
+
+.join-note {
+    color: $colorTip;
+    font-size: 12px;
+}
+
+.footer {
+    font-size: 12px;
+    color: $colorTip;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.common-toast {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 11000;
+    width: auto;
+    padding: 0 8px;
+    line-height: 34px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: $white;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.common-toast-show {
+    animation: commonToastShow ease 300ms;
+}
+
+.common-toast-hide {
+    animation: commonToastHide ease 500ms;
+}
+
+@keyframes commonToastShow {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes commonToastHide {
+    0% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) scale(0);
+    }
+}
+
+//tag
+.icon-tag {
+    display: inline-block;
+    padding: 2px 4px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    color: $white;
+    vertical-align: top;
+    &.tag-blueBd {
+        @include pixelborder(all, $colorBlue, 2px);
+        color: $colorBlue;
+    }
+    &.tag-redBd {
+        @include pixelborder(all, $colorPrimary, 2px);
+        color: $colorPrimary;
+    }
+    &.tag-yellowBd {
+        @include pixelborder(all, $colorYellow, 2px);
+        color: $colorYellow;
+    }
+    &.tag-grayBd {
+        @include pixelborder(all, $borderColor, 2px);
+        color: $borderColor;
+    }
+    &.tag-noBuy {
+      background-color: #b9bfca;
+      color: #fff;
+    }
+    &.tag-redBg {
+        background-color: $colorPrimary;
+    }
+    &.tag-blueBg {
+        background-color: $colorBlue;
+    }
+    &.tag-yellowBg {
+        background-color: $colorYellow;
+    }
+}
+
+//边框样式
+@mixin redBd {
+    @include pixelborder(all, $colorPrimary, 5px);
+    color: $colorPrimary;
+    background-color: rgba($colorPrimary, 0.2);
+}
+
+@mixin blueBd {
+    @include pixelborder(all, $colorBlue, 5px);
+    color: $colorBlue;
+    background-color: rgba($colorBlue, 0.2);
+}
+
+@mixin grayBd {
+    @include pixelborder(all, $colorTip, 5px);
+    color: $colorTip;
+    background-color: rgba($colorTip, 0.2);
+}
+
+//set-btn
+.btn-set {
+    display: inline-block;
+    padding: 0 0 0 6px;
+    min-width: 150px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: left;
+    @include grayBd;
+    .icon {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-image: url(~@/assets/icon_greyedit.png);
+        background-size: 100%;
+        float: right;
+        margin: 7px 6px;
+    }
+    &.modify {
+        @include blueBd;
+        .icon {
+            background-image: url(~~@/assets/icon_blueedit.png);
+        }
+    }
+    &.danger {
+        position: relative;
+        @include redBd;
+        .icon {
+            background-image: url(~@/assets/icon_rededit.png);
+        }
+    }
+}
+
+.set-popup {
+    @include pixelborder(all, $colorPrimary, 4px);
+    // border: 1px solid $colorPrimary;
+    display: inline-block;
+    position: absolute!important;
+    left: 0px;
+    top: -58px;
+    width: 150px;
+    padding: 6px 10px;
+    line-height: 18px;
+    background-color: $white;
+    font-size: 11px;
+    text-align: center;
+    font-weight: normal;
+    .icon {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: solid transparent;
+        border-width: 8px;
+        border-top-color: $colorPrimary;
+        content: "";
+        position: absolute;
+        bottom: -23px;
+        right: 60px;
+        &:after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: solid transparent;
+            border-width: 8px;
+            border-top-color: $white;
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            right: -8px;
+        }
+    }
+}
+
+// 价格
+.price {
+    color: $colorPrimary!important;
+}
+
+.income {
+    color: #09bb07;
+}
+
+//时间刻度
+.timeWrap {
+    height: 10px;
+    line-height: 10px;
+    font-size: 0px;
+    width: 200px;
+    display: inline-block;
+    padding-left: 15px;
+    i {
+        width: 4px;
+        height: 9px;
+        overflow: hidden;
+        border-radius: 2px;
+        background-color: $grayBg;
+        display: inline-block;
+        margin-right: 1px;
+        &.normal {
+            background-color: $colorBlue;
+        }
+        &.warn {
+            background-color: $colorPrimary;
+        }
+    }
+}

@@ -1,0 +1,159 @@
+// body {
+//     background-color: $backgroundColor;
+// }
+
+.service {}
+
+.customerList {
+    .title {
+        height: 34px;
+        line-height: 34px;
+        color: $colorTip;
+        font-size: 12px;
+    }
+}
+
+// 列表共用
+.list-wrap {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    background-color: $white;
+    @include pixelborder(bottom, $lineColor, 0);
+}
+
+.list-title {
+    height: 34px;
+    line-height: 34px;
+    color: $colorDefault;
+    background-color: $white;
+    // font-size: 13px;
+    .icon {
+        height: 16px;
+        width: 2px;
+        float: left;
+        margin-top: 8px;
+        margin-right: 8px;
+        background-color: $colorTip;
+    }
+    span {
+        font-size: 12px;
+        padding-left: 4px;
+    }
+}
+
+.searchWarp {
+    min-height: 90vh;
+}
+
+.list-service {
+    .item {
+        @include pixelborder(top, $lineColor, 0);
+        display: flex;
+        padding: 15px 0;
+        dt,
+        dd {
+            flex: 1;
+        }
+        >dt {
+            text-align: left;
+            p {
+                color: $colorTip;
+                font-size: 12px;
+            }
+        }
+        >dd {
+            text-align: right;
+            padding: 0 10px;
+        }
+    }
+    .intr {
+        padding-bottom: 16px;
+        padding-right: 15px;
+    }
+
+}
+  // 续费时间进度条
+.time-progress{
+  position: relative;
+  margin: 0 10px;
+  height: 50px;
+  overflow: hidden;
+  span{
+    position: absolute;
+    height: 18px;
+  }
+  .progress-wrap{
+    width: 100%;
+    background-color: $grayBg;
+    z-index: 0;
+  }
+  .current{
+    background-color: $colorBlue;
+    z-index: 2;
+  }
+  .want{
+    border:1px solid $colorBlue;
+    background-color:#f1f8ff;
+    z-index: 1;
+  }
+  .reality{
+    z-index: 3;
+    height: 8px;
+    border: 1px solid $colorPrimary;
+    top:26px;
+    background-image: url(~@/assets/img_pattern.png);
+    background-repeat: repeat-x;
+    i{
+      position: absolute;
+      right: -1px;
+      bottom: 0px;
+      width: 1px;
+      height: 30px;
+      background-image:url(~@/assets/dotted_line.png);
+    }
+  }
+
+}
+.progress-label{
+  width: 100%;
+  overflow: hidden;
+  padding: 0 15px 10px;
+  li{
+    float: left;
+    padding-right: 15px;
+    font-size: 12px;
+    &.reality{
+      float: right;
+      padding-right:0px;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .icon{
+    width: 12px;
+    height: 12px;
+    margin-right:2px;
+    vertical-align: middle;
+  }
+  .current{
+    .icon{
+      background-color: $colorBlue;
+    }
+
+  }
+  .want{
+    .icon{
+      border:1px solid $colorBlue;
+      background-color:#f1f8ff;
+    }
+  }
+  .reality{
+    .icon{
+      border: 1px solid $colorPrimary;
+      background-image: url(~@/assets/img_pattern.png);
+      background-repeat: repeat-x;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.login {
+    .topbanner {
+        text-align: center;
+        padding: 60px 0 46px;
+    }
+    .login-form {
+        padding-bottom: 25px;
+        .mint-field {
+            // border-bottom: 1px solid #E5E5E5;
+            // margin: 0 15px;
+            input {
+                // font-size: 24px;
+                color: $colorDefault;
+                padding-left: 10px;
+            }
+        }
+        .mint-button {
+            height: 34px;
+            margin-right: 5px;
+        }
+    }
+    .join-note {
+        text-align: center;
+        a {
+            color: $colorPrimary;
+        }
+    }
+}

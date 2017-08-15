@@ -1,0 +1,23 @@
+.icon {
+    display: inline-block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.icon-search {
+    width: 23px;
+    height: 23px;
+    background-image: url(~@/assets/icon_search.png);
+}
+
+.icon-tick {
+    width: 23px;
+    height: 23px;
+    background-image: url(~@/assets/icon_tick.png);
+}
+
+.icon-delete {
+    width: 23px;
+    height: 23px;
+    background-image: url(~@/assets/icon_delete.png);
+}

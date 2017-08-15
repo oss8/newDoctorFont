@@ -1,0 +1,34 @@
+//颜色定义
+$backgroundColor:#f7f7fa; //灰色背景颜色
+$colorDefault:#7a8392; //默认
+$colorPrimary:#e13f2c; //主要
+$colorTitle:#000; //标题
+$colorTitleSub:#9b9b9b; //二级标题
+$colorText:#4a4a4a; //文字
+$colorTip:#b9bfca; //提示备注文字
+$colorBlue:#4a90e2; //蓝色标题
+$colorYellow:#f5a623; //黄色标签
+$colorDisable:#dddddd; //不可操作
+$borderColor:#e4e8ed; //边框颜色
+$lineColor:#e4e8ed; //分割线
+$colorPlaceholder:#b9bfca; //输入框默认文字颜色
+$white:#ffffff;
+$grayBg:#f4f6f8; //按钮灰色背景
+
+
+@import "border";//边框定义
+@import "button";//按钮定义
+@import "icon";//小图标
+@import "dropdown";//下拉菜单
+
+@import "common";//公用样式
+
+@import "popup";//下侧弹出框
+@import "tabbar";//底部菜单栏
+@import "swipe";//轮播图
+
+@import "customer";//客户
+@import "city";//新注册
+@import "login";//登录
+@import "order";//订单信息
+@import "service";//服务

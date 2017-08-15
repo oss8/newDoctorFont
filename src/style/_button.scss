@@ -1,0 +1,40 @@
+// button
+.mint-button {
+    span {
+        font-size: 12px;
+    }
+}
+
+.mint-button--large {
+    height: 48px;
+}
+
+.mint-button--primary {
+    background-color: $colorPrimary;
+}
+
+.mint-button--default {
+    border-radius: 2px;
+    // font-size: 14px;
+    color: $colorDefault;
+}
+
+.mint-button--radius {
+    border-radius: 16px;
+    border: 1px solid $colorTip;
+    background-color: #efeff4;
+    box-shadow: none;
+}
+
+.btn-p-b {
+    padding-bottom: 68px;
+}
+
+.footer-btnWrap {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 10px 10px 10px;
+    background-color: $backgroundColor;
+}

@@ -1,0 +1,105 @@
+.mint-popup-bottom {
+    width: 100%;
+}
+
+.choose-package {
+    .title {
+        width: 100%;
+        height: 60px;
+        padding: 10px 15px 0;
+        .left {
+            float: left;
+        }
+        .mint-button {}
+    }
+    .intr {
+        font-size: 12px;
+        color: $colorTip;
+    }
+    .amount,
+    .time {
+      @include pixelborder(top, $borderColor, 0);
+        padding: 12px 10px;
+        ul {
+            // width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        li {
+            padding: 5px;
+            position: relative;
+            font-size: 14px;
+            .item {
+                // @include grayBd;
+                @include pixelborder(all, $borderColor, 2px);
+                background-color: $white;
+                display: block;
+                text-align: center;
+                padding: 8px 2px;
+                .price{
+                  color: $colorTip!important;
+                  font-size: 12px;
+                }
+            }
+            .tag-yellowBg {
+                position: absolute;
+                top: -5px;
+                right: 5px;
+            }
+            &.selected {
+                .item {
+                    @include redBd;
+                    .price{
+                      color: $colorPrimary!important;
+                    }
+                }
+            }
+            &.disabled {
+                .item {
+                    @include pixelborder(all, #f6f6f6, 2px);
+                    background-color: #fbfbfb;
+                    color: #ddd;
+                    .price{
+                      color: #ddd!important;
+                    }
+                }
+            }
+        }
+    }
+    .amount {
+        li {
+            width: 20%;
+        }
+    }
+    .time {
+        li {
+            width: 33.33%;
+        }
+    }
+    .price-description {
+        border: 1px dashed $borderColor;
+        text-align: center;
+        color: $colorTip;
+        font-size: 12px;
+        dt {
+            padding: 6px 0;
+            border-bottom: 1px dashed $borderColor;
+            // text-align: center;
+        }
+        dd {
+            display: flex;
+            span {
+                flex: 1;
+                padding: 10px 0;
+                // text-align: center;
+            }
+        }
+    }
+  .renew-date{
+    font-size: 12px;
+    padding: 0 15px 10px;
+    @include pixelborder(bottom, $lineColor, 0);
+  }
+}
