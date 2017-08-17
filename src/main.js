@@ -4,7 +4,7 @@ import Vue from 'vue'
 import 'mint-ui/lib/style.min.css'
 
 import App from '@/App'
-import { Button, Cell, Badge, Picker, IndexList, IndexSection, DatetimePicker, Field, Popup, Tabbar, TabItem, TabContainer, TabContainerItem, Swipe, SwipeItem, Progress, Range, Toast, Search, Radio } from 'mint-ui'
+import { Button, Cell, Badge, Picker, IndexList, IndexSection, DatetimePicker, Field, Popup, Tabbar, TabItem, TabContainer, TabContainerItem, Swipe, SwipeItem, Progress, Range, Toast, Search, Radio ,Checklist } from 'mint-ui'
 import router from '@/router'
 import { Auth, Api, City } from '@/plugins'
 import * as filters from '@/filters'
@@ -29,6 +29,7 @@ Vue.component(Search.name, Search)
 Vue.component(Radio.name, Radio)
 Vue.component(IndexList.name, IndexList)
 Vue.component(IndexSection.name, IndexSection)
+Vue.component(Checklist.name, Checklist);
 // Vue.use(vconsole)
 Object.keys(filters).forEach(k => {
     Vue.filter(k, filters[k])

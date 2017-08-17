@@ -1,16 +1,24 @@
 //颜色定义
-$backgroundColor:#f7f7fa; //灰色背景颜色
-$colorDefault:#7a8392; //默认
-$colorPrimary:#e13f2c; //主要
-$colorTitle:#000; //标题
-$colorTitleSub:#9b9b9b; //二级标题
+$backgroundColor:#f7f7f7; //灰色背景颜色
+$colorDefault:#333; //默认
+$colorPrimary:#06aa98; //主要
+
+$colorTitle:#333; //标题
+$colorTitleSub:#9c9c9c; //二级标题
 $colorText:#4a4a4a; //文字
-$colorTip:#b9bfca; //提示备注文字
-$colorBlue:#4a90e2; //蓝色标题
+$colorTip:#b6b6b6; //提示备注文字
+
+$colorBlue:#76a6ef; //蓝色标题
 $colorYellow:#f5a623; //黄色标签
+$colorOrange:#fd3f2f;//橙色
+$colorRose:#e92c81;//玫红
+$colorViolet:#6859ea;//紫色
+
 $colorDisable:#dddddd; //不可操作
-$borderColor:#e4e8ed; //边框颜色
-$lineColor:#e4e8ed; //分割线
+
+$borderColor:#e9e9e9; //边框颜色
+$lineColor:#e9e9e9; //分割线
+
 $colorPlaceholder:#b9bfca; //输入框默认文字颜色
 $white:#ffffff;
 $grayBg:#f4f6f8; //按钮灰色背景
@@ -23,12 +31,302 @@ $grayBg:#f4f6f8; //按钮灰色背景
 
 @import "common";//公用样式
 
-@import "popup";//下侧弹出框
-@import "tabbar";//底部菜单栏
-@import "swipe";//轮播图
 
-@import "customer";//客户
-@import "city";//新注册
-@import "login";//登录
-@import "order";//订单信息
-@import "service";//服务
+// 个人信息
+.chronic-disease{
+  background-color:#fff;
+  text-align: center;
+  font-size: 0px;
+  padding-bottom: 10px;
+  @include pixelborder(bottom, $lineColor, 0);
+  span{
+    font-size: 13px;
+    width:30%;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    background-color: #fff;
+    @include pixelborder(all, $lineColor, 2px);
+    margin: 6px 4px;
+    color: $colorTip;
+    &.selected{
+      position: relative;
+      color: $colorPrimary;
+      @include pixelborder(all, $colorPrimary, 2px);
+      i{
+        position: absolute;
+        background-image: url(~@/assets/icon_check2.png);
+        width: 18px;
+        height: 18px;
+        bottom: 0px;
+        right: 0px;
+      }
+    }
+  }
+}
+// 无好友信息
+.no-data{
+  height: 100%;
+  padding-bottom: 140px;
+  color: $colorTip;
+  p{
+    padding-top: 15px;
+  }
+}
+//好友列表
+.my-friends{
+}
+//我的二维码
+.QRCode{
+  height: 100%;
+  padding-bottom: 68px;
+  color: $colorTip;
+  h4{
+    font-size: 17px;
+    padding-bottom: 18px;
+  }
+  p{
+    padding-top: 15px;
+  }
+}
+
+.info-warp{
+  background-color: #fff;
+  @include pixelborder(bottom, $lineColor, 0);
+}
+.info-title{
+  font-size: 17px;
+}
+.info-label{
+  font-size: 12px;
+  color: $colorTip;
+}
+.btn-list{
+  @include pixelborder(top, $lineColor, 0);
+  height: 44px;
+  line-height:44px;
+  color: $colorPrimary;
+  margin-top: 10px;
+  font-size: 13px;
+  .icon{
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  span:first-child{
+    @include pixelborder(right, $lineColor, 0);
+  }
+}
+// 列表
+.list-box{
+  background-color: #fff;
+  @include pixelborder(top, $lineColor, 0);
+}
+.item{
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: inherit;
+  width: 100%;
+  // overflow: hidden;
+  padding: 12px 15px;
+  @include pixelborder(bottom, $lineColor, 0);
+  
+  .info-title{
+    font-size: 14px;
+    b{
+      font-size: 12px;
+      font-weight: normal;
+      padding: 0 3px;
+      margin-left: 4px;
+      color: #e13f2c;
+      @include pixelborder(all,#e13f2c, 0);
+    }
+    span{
+      font-size: 10px;
+      color: $colorTip;
+      padding-left: 3px;
+    }
+  }
+  .item-left{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    .icon{
+      width: 35px;
+      height: 35px;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  .item-right{
+    float: right;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    b{
+      font-size: 17px;
+      font-weight: normal;
+    }
+    &.is-link {
+        margin-right:20px;
+    }
+    .btn-change{
+      font-size: 13px;
+      line-height: 35px;
+      color: $colorPrimary;
+      padding: 0 10px;
+      @include pixelborder(left, $lineColor, 0);
+      .icon{
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.item-detail{
+  // padding-top: 15px;
+}
+// 历史数据
+.state-info{
+  height: 170px;
+  margin: 8px;
+  border-radius: 3px;
+  background-color: $colorPrimary;
+  background-image:-webkit-linear-gradient(left, #0fb9df, #0cd3a1);
+  background-image:linear-gradient(left, #0fb9df, #0cd3a1);
+  box-shadow: 0 1px 2px 0 #b6b6b6;
+  .info-box{
+    height: 130px;
+    padding: 15px 15px 15px 46px;
+    position: relative;
+    color: rgba(255,255,255, 0.7);
+    .icon{
+      position: absolute;
+      top: 16px;
+      left: 10px;
+    }
+    p{
+      font-size: 10px;
+    }
+    h2{
+      color:#fff;
+      padding-top: 20px;
+      font-size: 17px;
+      font-weight: normal;
+    }
+    h4{
+      font-size: 14px;
+      color: rgba(255,255,255, 0.7);
+      font-weight: normal;
+    }
+    .info-other{
+      position: absolute;
+      top:15px;
+      right: 15px;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+    }
+    .step-box{
+      width: 100px;
+      height: 100px;
+      border:6px solid #fff;
+      border-radius: 100%;
+      text-align: center;
+      span{
+        display: inline-block;
+        font-size: 24px;
+        padding-top: 18px;
+      }
+    }
+  }
+  .btn-more{
+    height: 40px;
+    background-color: #fff;
+    border-radius: 0 0 3px 3px;
+    text-align: center;
+  }
+}
+.HealthReport{
+  .state-info{
+  background-color: #899ed4;
+  background-image:-webkit-linear-gradient(left, #899ed4, #a389d4);
+  background-image:linear-gradient(left, #899ed4, #a389d4);
+  box-shadow: 0 1px 2px 0 #b6b6b6;
+  }
+}
+.chart-box{
+  // height: 160px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 0 10px;
+  .chart-title{
+    height: 44px;
+    padding: 0px 3px;
+    @include pixelborder(bottom, $lineColor, 0);
+  }
+  .newest-number{
+    text-align: right;
+    span{
+      font-size: 17px;
+      b{
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+    p{
+      font-size: 10px;
+      color: $colorTip;
+    }
+    &.pwv{
+      span{
+        color: #76a6ef;
+      }
+    }
+    &.bloodpressure{
+      span{
+        color: #f5a623;
+      }
+    }
+    &.heartrate{
+      span{
+        color: #e92c81;
+      }
+    }
+    &.sport{
+      span{
+        color: #06aa98;
+      }
+    }
+    &.sleep{
+      span{
+        color: #6859ea;
+      }
+    }
+  }
+  .chart-main{
+    height: 120px;
+  }
+}
+.report-text{
+  color: $colorTitleSub;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 20px;
+}

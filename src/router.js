@@ -1,19 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import { } from '@/pages'
+import {
+  MyInfo,
+  FrindDetail,
+  HealthReport,
+  HistoryData,
+  MyFriends,
+  ItemDetail,
+  QRCode,
+  SickHistory,
+  Modify
+} from '@/pages'
 
 Vue.use(Router)
 
 var router = new Router({
   routes: [{
     path: '/',
-    name: 'landing',
-    component: Landing,
+    name: 'Modify',
+    component: SickHistory,
     meta: {
       anonymous: true,
       title: '壹向加盟商'
     }
-  }
+  }]
 })
 
 // 检查是否已登录
